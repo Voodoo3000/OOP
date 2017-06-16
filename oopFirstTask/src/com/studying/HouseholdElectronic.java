@@ -8,7 +8,10 @@ package com.studying;
  прибор в квартире, соответствующий заданному диапазону параметров.
  */
 public abstract class HouseholdElectronic {
-    public void PlugIn(int power) {
-        System.out.println("Plug in socket:" + power);
+    int pcpower = 300;
+    int tvpower = 240;
+    int routerpower = 50;
+    public void plugIn(int power) {
+        System.out.println("Pluging in socket, consumed power is: " + power + "W");
     }
 }
