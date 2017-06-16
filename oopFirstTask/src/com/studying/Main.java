@@ -7,6 +7,8 @@ public class Main {
 	    TV tv = new TV();
 	    Router router = new Router();
 	    Fridge fridge = new Fridge();
-		pc.PlugIn(300);
+	    pc.plugIn(pc.pcpower);
+		tv.plugIn(tv.tvpower);
+		router.plugIn(router.routerpower);
     }
 }
