@@ -8,7 +8,7 @@ public class Main {
 	    Router router = new Router();
 	    Fridge fridge = new Fridge();
 	    pc.plugIn(pc.pcpower);
-		tv.plugIn(tv.tvpower);
-		router.plugIn(router.routerpower);
+	    tv.plugIn(tv.tvpower);
+	    router.plugIn(router.routerpower);
     }
 }
