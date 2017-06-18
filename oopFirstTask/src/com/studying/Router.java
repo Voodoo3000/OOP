@@ -4,5 +4,7 @@ package com.studying;
  * Created by VladislavYTsa on 15.06.2017.
  */
 public class Router extends HouseholdElectronic {
-  int routerpower = 50;
+    String name = "Internet router";
+    double amp = 1.5;
+    int volt = 50;
 }

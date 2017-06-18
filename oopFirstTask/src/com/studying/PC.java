@@ -4,5 +4,10 @@ package com.studying;
  * Created by VladislavYTsa on 15.06.2017.
  */
 public class PC extends HouseholdElectronic {
-  int pcpower = 300;
+    public PC (boolean onOff) {
+
+    }
+    String name = "Desktop PC";
+    double amp = 2.5;
+    int volt = 220;
 }
