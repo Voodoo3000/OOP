@@ -5,11 +5,10 @@ package com.studying;
  */
 public class PC extends HouseholdElectronic {
 
-    public PC(boolean onOff) {
+    public PC(boolean onOff, double power) {
         this.onOff = onOff;
+        this.power = power;
     }
 
-    String name = "Desktop PC";
-    double amp = 2.5;
-    int volt = 220;
+
 }

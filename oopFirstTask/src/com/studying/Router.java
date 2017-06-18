@@ -5,11 +5,8 @@ package com.studying;
  */
 public class Router extends HouseholdElectronic {
 
-    public Router(boolean onOff) {
+    public Router(boolean onOff, double power) {
         this.onOff = onOff;
+        this.power = power;
     }
-
-    String name = "Internet router";
-    double amp = 1.5;
-    int volt = 50;
 }

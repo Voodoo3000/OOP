@@ -5,11 +5,8 @@ package com.studying;
  */
 public class TV extends HouseholdElectronic {
 
-    public TV(boolean onOff) {
+    public TV(boolean onOff, double power) {
         this.onOff = onOff;
+        this.power = power;
     }
-
-    String name = "TV";
-    double amp = 2;
-    int volt = 110;
 }

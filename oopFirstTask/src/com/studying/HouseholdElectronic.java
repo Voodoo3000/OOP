@@ -7,14 +7,25 @@ package com.studying;
  * Провести сортировку приборов в квартире на основе мощности. Найти
  * прибор в квартире, соответствующий заданному диапазону параметров.
  */
-public abstract class HouseholdElectronic {
+public abstract class HouseholdElectronic implements Comparable{
 
+    double power;
     boolean onOff;
 
-    public void powerCalc(String name, double amp, int volt, boolean onOff) {
-        if (onOff == true) {
-            double power = amp * volt;
-            System.out.println(name + " pluged in the socket, consumed power is: " + power + "W");
-        } else System.out.println(name + " isn't pluged the in socket");
+    @Override
+    public int compareTo(Object o) {
+        if (power < ((HouseholdElectronic) o).power) {
+            return -1;
+        } else if (power == ((HouseholdElectronic) o).power) {
+            return 0;
+        } else return 1;
+    }
+
+    @Override
+    public String toString() {
+        return "HouseholdElectronic{" +
+                "power=" + power +
+                ", onOff=" + onOff +
+                '}';
     }
 }

@@ -5,11 +5,8 @@ package com.studying;
  */
 public class Fridge extends HouseholdElectronic {
 
-    public Fridge(boolean onOff) {
+    public Fridge(boolean onOff, double power) {
         this.onOff = onOff;
+        this.power = power;
     }
-
-    String name = "Fridge";
-    double amp = 1.5;
-    int volt = 220;
 }
