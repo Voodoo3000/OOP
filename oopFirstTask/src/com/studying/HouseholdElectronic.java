@@ -8,11 +8,13 @@ package com.studying;
  * прибор в квартире, соответствующий заданному диапазону параметров.
  */
 public abstract class HouseholdElectronic {
-    private boolean onOff;
 
-    public void powerCalc(String name, double amp, int volt) {
-        double power = amp * volt;
-        System.out.println(name + " pluged in socket, consumed power is: " + power + "W");
+    boolean onOff;
+
+    public void powerCalc(String name, double amp, int volt, boolean onOff) {
+        if (onOff == true) {
+            double power = amp * volt;
+            System.out.println(name + " pluged in the socket, consumed power is: " + power + "W");
+        } else System.out.println(name + " isn't pluged the in socket");
     }
-
 }
