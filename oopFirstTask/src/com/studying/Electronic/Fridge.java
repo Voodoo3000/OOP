@@ -7,20 +7,15 @@ import com.studying.Appliances.HouseholdElectronic;
  */
 public class Fridge extends HouseholdElectronic {
 
-    int capacity = 560;
+    private int capacity = 560;
 
-    public Fridge(String modelName, boolean onOff, double power) {
-        this.onOff = onOff;
-        this.power = power;
-        this.modelName = modelName;
-    }
     @Override
     public String toString() {
         return "Refridgerator " +
-                modelName + "; Capacity "
+                getModelName() + "; Capacity "
                 + this.capacity + "Litres " +
-                "; consumption power: " + power + "W, " +
-                "on: " + onOff +
+                "; consumption power: " + getPower() + "W, " +
+                "on: " + isOnOff() +
                 '}' + super.toString();
     }
 }

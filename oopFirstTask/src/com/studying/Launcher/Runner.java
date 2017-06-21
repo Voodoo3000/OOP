@@ -12,10 +12,22 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        PC pc = new PC("ROG G20CB",true, 500);
-        TV tv = new TV("Sony XE94",true, 240);
-        Router router = new Router("HP R120",true, 50);
-        Fridge fridge = new Fridge("Bosch KDD74AL20N",false, 150);
+        PC pc = new PC();
+        pc.setModelName("ROG G20CB");
+        pc.setOnOff(true);
+        pc.setPower(500);
+        TV tv = new TV();
+        tv.setModelName("Sony XE94");
+        tv.setOnOff(true);
+        tv.setPower(240);
+        Router router = new Router();
+        router.setModelName("HP R120");
+        router.setOnOff(true);
+        router.setPower(50);
+        Fridge fridge = new Fridge();
+        fridge.setModelName("Bosch KDD74AL20N");
+        fridge.setOnOff(false);
+        fridge.setPower(150);
 
         HouseholdElectronic as[] = new HouseholdElectronic[]{pc, tv, router, fridge};
         Arrays.sort(as);
@@ -24,10 +36,10 @@ public class Runner {
         double minPower = 100d;
         double maxPower = 500d;
         for(HouseholdElectronic i : as) {
-            if(i.onOff) {
-                sum = sum + i.power;
+            if(i.isOnOff()) {
+                sum = sum + i.getPower();
             }
-            if (i.power > minPower && i.power <= maxPower) {
+            if (i.getPower() > minPower && i.getPower() <= maxPower) {
                 System.out.println("Suitable consumption power: " + i);
             }
         }
