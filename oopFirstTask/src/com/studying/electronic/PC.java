@@ -1,6 +1,6 @@
-package com.studying.Electronic;
+package com.studying.electronic;
 
-import com.studying.Appliances.HouseholdElectronic;
+import com.studying.appliances.HouseholdElectronic;
 
 /**
  * Created by VladislavYTsa on 15.06.2017.

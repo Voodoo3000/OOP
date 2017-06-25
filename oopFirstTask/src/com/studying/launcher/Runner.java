@@ -1,11 +1,11 @@
-package com.studying.Launcher;
+package com.studying.launcher;
 
-import com.studying.Appliances.HouseholdElectronic;
-import com.studying.Electronic.Fridge;
-import com.studying.Electronic.PC;
-import com.studying.Electronic.Router;
-import com.studying.Electronic.TV;
-
+import com.studying.appliances.HouseholdElectronic;
+import com.studying.appliances.AppliancesList;
+import com.studying.electronic.Fridge;
+import com.studying.electronic.PC;
+import com.studying.electronic.Router;
+import com.studying.electronic.TV;
 import java.util.Arrays;
 
 public class Runner {
@@ -29,13 +29,14 @@ public class Runner {
         fridge.setOnOff(false);
         fridge.setPower(150);
 
-        HouseholdElectronic as[] = new HouseholdElectronic[]{pc, tv, router, fridge};
-        Arrays.sort(as);
+        AppliancesList appliancesList = new AppliancesList(pc, tv, router, fridge);
+
+        Arrays.sort(appliancesList.getAs());
 
         double sum = 0;
         double minPower = 100d;
         double maxPower = 500d;
-        for(HouseholdElectronic i : as) {
+        for(HouseholdElectronic i : appliancesList.getAs()) {
             if(i.isOnOff()) {
                 sum = sum + i.getPower();
             }

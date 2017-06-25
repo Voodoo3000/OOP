@@ -1,12 +1,13 @@
-package com.studying.Appliances;
+package com.studying.appliances;
 
-/**
+/*
  * Created by VladislavYTsa on 15.06.2017.
  * Домашние электроприборы. Определить иерархию электроприборов.
  * Включить некоторые в розетку. Подсчитать потребляемую мощность.
  * Провести сортировку приборов в квартире на основе мощности. Найти
  * прибор в квартире, соответствующий заданному диапазону параметров.
  */
+
 public abstract class HouseholdElectronic implements Comparable{
 
     private String modelName;
@@ -15,15 +16,11 @@ public abstract class HouseholdElectronic implements Comparable{
 
     @Override
     public int compareTo(Object o) {
-        if (o instanceof HouseholdElectronic){
             if (power < ((HouseholdElectronic) o).power) {
                 return 1;
             } else if (power == ((HouseholdElectronic) o).power) {
                 return 0;
             } else return -1;
-        }
-        else System.out.println("Unacceptable inbond object");
-        return 0;
     }
     @Override
     public String toString() {
