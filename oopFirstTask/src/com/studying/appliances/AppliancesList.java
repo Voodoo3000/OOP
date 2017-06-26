@@ -11,21 +11,16 @@ import com.studying.electronic.TV;
 
 public class AppliancesList{
 
-    private PC pc;
-    private TV tv;
-    private Router router;
-    private Fridge fridge;
+private HouseholdElectronic as [] = new HouseholdElectronic[]{};
 
-    public AppliancesList(PC pc, TV tv, Router router, Fridge fridge) {
-        this.pc = pc;
-        this.tv = tv;
-        this.router = router;
-        this.fridge = fridge;
+public AppliancesList(PC pc, TV tv, Router router, Fridge fridge) {
+
+    this.as = new HouseholdElectronic[]{pc, tv, router, fridge};
     }
 
-    HouseholdElectronic[] as = new HouseholdElectronic[]{pc, tv, router, fridge};
+ HouseholdElectronic[] as = new HouseholdElectronic[]{pc, tv, router, fridge};
 
-    public HouseholdElectronic[] getAs() {
+ public HouseholdElectronic[] getAs() {
         return as;
     }
 }
