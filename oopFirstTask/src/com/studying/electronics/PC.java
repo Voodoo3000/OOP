@@ -1,4 +1,4 @@
-package com.studying.electronic;
+package com.studying.electronics;
 
 import com.studying.appliances.HouseholdElectronic;
 
@@ -17,7 +17,6 @@ public class PC extends HouseholdElectronic {
                 + this.cpuGhz + "Ghz; " +
                 "GPU " + this.gpu +
                 "; consumption power: " + getPower() + "W, " +
-                "on: " + isOnOff() +
-                '}' + super.toString();
+                "on: " + isOnOff() + super.toString();
     }
 }

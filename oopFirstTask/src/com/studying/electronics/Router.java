@@ -1,4 +1,4 @@
-package com.studying.electronic;
+package com.studying.electronics;
 
 import com.studying.appliances.HouseholdElectronic;
 
@@ -17,7 +17,6 @@ public class Router extends HouseholdElectronic {
                 + this.linkSpeed + "Mbit/s; " +
                 "Features " + this.vlanfeature +
                 "; consumption power: " + getPower() + "W, " +
-                "on: " + isOnOff() +
-                '}' + super.toString();
+                "on: " + isOnOff() + super.toString();
     }
 }

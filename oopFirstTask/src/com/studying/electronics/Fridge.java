@@ -1,4 +1,4 @@
-package com.studying.electronic;
+package com.studying.electronics;
 
 import com.studying.appliances.HouseholdElectronic;
 
@@ -15,7 +15,6 @@ public class Fridge extends HouseholdElectronic {
                 getModelName() + "; Capacity "
                 + this.capacity + "Litres " +
                 "; consumption power: " + getPower() + "W, " +
-                "on: " + isOnOff() +
-                '}' + super.toString();
+                "on: " + isOnOff() + super.toString();
     }
 }

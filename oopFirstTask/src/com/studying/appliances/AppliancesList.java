@@ -1,30 +1,21 @@
 package com.studying.appliances;
 
-import com.studying.electronic.Fridge;
-import com.studying.electronic.PC;
-import com.studying.electronic.Router;
-import com.studying.electronic.TV;
+import com.studying.electronics.Fridge;
+import com.studying.electronics.PC;
+import com.studying.electronics.Router;
+import com.studying.electronics.TV;
 
 /**
- * Created by Voodoo3000 on 22.06.2017.
+ * Created by VladislavYTsa on 22.06.2017.
  */
-
 public class AppliancesList{
 
-    private PC pc;
-    private TV tv;
-    private Router router;
-    private Fridge fridge;
+    private HouseholdElectronic as [] = new HouseholdElectronic[]{};
 
     public AppliancesList(PC pc, TV tv, Router router, Fridge fridge) {
-        this.pc = pc;
-        this.tv = tv;
-        this.router = router;
-        this.fridge = fridge;
+
+        this.as = new HouseholdElectronic[]{pc, tv, router, fridge};
     }
-
-    HouseholdElectronic[] as = new HouseholdElectronic[]{pc, tv, router, fridge};
-
     public HouseholdElectronic[] getAs() {
         return as;
     }
